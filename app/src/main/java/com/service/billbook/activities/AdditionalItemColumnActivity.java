@@ -1,15 +1,12 @@
 package com.service.billbook.activities;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.service.billbook.R;
 import com.service.billbook.adapter.CustomFieldAdapter;
 import com.service.billbook.model.CustomFieldModel;
@@ -28,11 +24,8 @@ import com.service.billbook.servicemodels.DeleteSettingsModel;
 import com.service.billbook.servicemodels.EncodeModel;
 import com.service.billbook.servicemodels.GetAdditionalSettingsModel;
 import com.service.billbook.servicemodels.SetAdditionalSettingsModel;
-import com.service.billbook.servicemodels.VerifyOTPModel;
 import com.service.billbook.util.PrefsHelper;
-
 import java.util.ArrayList;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -166,7 +159,7 @@ public class AdditionalItemColumnActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     if (response != null) {
                         SetAdditionalSettingsModel m = response.body();
-                        String x = m.getResponse();
+//                        String x = m.getResponse();
                         boolean b = m.getResponse().equalsIgnoreCase("true");
                         if (b) {
 //                            CreateItemActivity.cii.custom_fields_list.clear();
@@ -346,7 +339,6 @@ public class AdditionalItemColumnActivity extends AppCompatActivity {
     }
 
     public void DeleteCustomColumn(String column_id, int index) {
-
         if (column_id != null) {
             //if column is saved in db then
             EncodeString(column_id);

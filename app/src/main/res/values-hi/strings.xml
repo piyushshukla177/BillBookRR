@@ -330,5 +330,20 @@
     <string name="WholeSale_Price">थोक मूल्य</string>
     <string name="Measuring_Unit">मापन इकाई</string>
     <string name="Are_you_sure_want_to_delete_this_Item_Deleted_Item_can_not_be_retrieved">क्या आप वाकई इस आइटम को हटाना चाहते हैं ? हटाए गए आइटम को पुनर्प्राप्त नहीं किया जा सकता है</string>
-
+    <string name="Add_Custom_Field">+ Add Custom Field</string>
+    <string name="Set_Custom_Fields">Set Custom Fields</string>
+    <string name="Charge_Name">Charge Name</string>
+    <string name="Additional_Charges">+ Additional Charges</string>
+    <string name="Discount">Discount</string>
+    <string name="Discount_percent">Discount %</string>
+    <string name="Discount_Rs">Discount Rs</string>
+    <string name="plus_Discount">+ Discount</string>
+    <string name="Round_Off">Round Off</string>
+    <string name="Plus_Round_Off">+ Round Off</string>
+    <string name="Type_Your_Notes_Here">Type Your Notes Here</string>
+    <string name="Plus_Notes">+ Notes</string>
+    <string name="Total_Amount_rs">Total Amount ₹ </string>
+    <string name="Cash_Received">+ Cash Received</string>
+    <string name="Cash_Received_rs">Cash Received ₹</string>
+    <string name="Balance_Amount_rs">Balance Amount ₹</string>
 </resources>

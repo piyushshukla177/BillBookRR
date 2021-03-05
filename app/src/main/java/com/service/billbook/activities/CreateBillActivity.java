@@ -717,6 +717,7 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
     private class ClearAllData extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... params) {
+            selected_party="";
             db.AdditionalDao().deleteAllAdditionalInfo();
             return "";
         }

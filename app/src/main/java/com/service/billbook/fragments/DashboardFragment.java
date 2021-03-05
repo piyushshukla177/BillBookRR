@@ -1,12 +1,15 @@
 package com.service.billbook.fragments;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.cardview.widget.CardView;
 import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.service.billbook.R;
 import com.service.billbook.activities.AllTransactionHistoryActivity;
 import com.service.billbook.activities.CompanySettingsActivity;
@@ -120,6 +124,7 @@ public class DashboardFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(getActivity(), CreatePurchaseActivity.class);
+                        intent.putExtra("from_activity", "purchase");
                         startActivity(intent);
                     }
                 }

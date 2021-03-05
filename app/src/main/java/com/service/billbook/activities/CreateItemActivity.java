@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -34,7 +33,6 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
@@ -53,14 +51,10 @@ import com.service.billbook.network.ApiHelper;
 import com.service.billbook.network.RetrofitClient;
 import com.service.billbook.network.VolleyMultipartRequest;
 import com.service.billbook.servicemodels.SetAdditionalSettingsModel;
-import com.service.billbook.util.FileUtils;
 import com.service.billbook.util.PrefsHelper;
-
 import org.json.JSONObject;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -69,8 +63,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
-
 import gun0912.tedbottompicker.TedBottomPicker;
 import gun0912.tedbottompicker.TedBottomSheetDialogFragment;
 import okhttp3.MediaType;
@@ -431,7 +423,6 @@ public class CreateItemActivity extends AppCompatActivity {
                     }
                 }
         );
-
         getAllDropDowns();
         getAllCategories();
         getAdditionalSettings();

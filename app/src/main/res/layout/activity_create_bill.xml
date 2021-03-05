@@ -107,15 +107,6 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:textSize="@dimen/_10sdp" />
 
-                <!--                <TextView-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_gravity="end"-->
-                <!--                    android:layout_marginTop="@dimen/_5sdp"-->
-                <!--                    android:text="+ Mobile Number"-->
-                <!--                    android:textColor="@color/btn_color"-->
-                <!--                    android:textSize="@dimen/_10sdp"-->
-                <!--                    android:textStyle="bold" />-->
             </LinearLayout>
 
             <LinearLayout
@@ -239,7 +230,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.6"
-                        android:hint="Charge Name"
+                        android:hint="@string/Charge_Name"
                         android:textSize="@dimen/_10sdp" />
 
                     <EditText
@@ -258,7 +249,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="+ Additional Charges"
+                    android:text="@string/Additional_Charges"
                     android:textColor="@color/btn_color"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold" />
@@ -290,7 +281,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:text="Discount"
+                        android:text="@string/Discount"
                         android:textSize="@dimen/_10sdp" />
 
                     <EditText
@@ -299,7 +290,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_20sdp"
                         android:layout_weight="0.3"
-                        android:hint="Discount %"
+                        android:hint="@string/Discount_percent"
                         android:inputType="numberDecimal"
                         android:textSize="@dimen/_10sdp" />
 
@@ -311,7 +302,7 @@
                         android:layout_marginLeft="@dimen/_20sdp"
                         android:layout_weight="0.3"
                         android:editable="false"
-                        android:hint="Discount Rs"
+                        android:hint="@string/Discount_Rs"
                         android:inputType="numberDecimal"
                         android:textSize="@dimen/_10sdp" />
                 </LinearLayout>
@@ -321,7 +312,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="+ Discount"
+                    android:text="@string/plus_Discount"
                     android:textColor="@color/btn_color"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold" />
@@ -353,7 +344,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:text="Round Off"
+                        android:text="@string/Round_Off"
                         android:textSize="@dimen/_10sdp" />
 
                     <RadioGroup
@@ -407,7 +398,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="+ Round Off"
+                    android:text="@string/Plus_Round_Off"
                     android:textColor="@color/btn_color"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold" />
@@ -447,7 +438,7 @@
                             android:id="@+id/notes_et"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Type Your Notes Here"
+                            android:hint="@string/Type_Your_Notes_Here"
                             android:textSize="@dimen/_10sdp" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -457,7 +448,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="+ Notes"
+                    android:text="@string/Plus_Notes"
                     android:textColor="@color/btn_color"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold" />
@@ -475,7 +466,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="Total Amount ₹ "
+                    android:text="@string/Total_Amount_rs"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
 
@@ -504,7 +495,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:text="+ Cash Received"
+                    android:text="@string/Cash_Received"
                     android:textColor="@color/btn_color"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold" />
@@ -524,7 +515,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="Cash Received ₹ "
+                    android:text="@string/Cash_Received_rs"
                     android:textColor="@color/light_black"
                     android:textSize="@dimen/_10sdp" />
 
@@ -551,7 +542,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="Balance Amount ₹ "
+                    android:text="@string/Balance_Amount_rs"
                     android:textColor="@color/green"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold" />
