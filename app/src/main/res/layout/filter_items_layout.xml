@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sort_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/sort_fiter"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/sort_tv"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_margin="@dimen/_11sdp"
+            android:text="@string/sort_iTEMS_by" />
+
+        <RelativeLayout
+            android:id="@+id/a_to_z_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/item_name_a_to_z"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/a_to_z_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:buttonTint="@color/btn_color"
+                android:scaleX="0.6"
+                android:scaleY="0.6" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/z_to_a_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/item_name_z_to_a"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/z_to_a_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:buttonTint="@color/btn_color"
+                android:scaleX="0.6"
+                android:scaleY="0.6" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/low_to_high_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/quantity_low_to_high"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/low_to_high_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:buttonTint="@color/btn_color"
+                android:scaleX="0.6"
+                android:scaleY="0.6" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/higth_to_low_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/quantity_high_to_low"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/high_to_low_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:buttonTint="@color/btn_color"
+                android:scaleX="0.6"
+                android:scaleY="0.6" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_11sdp"
+                android:text="@string/filter_items_by" />
+
+            <TextView
+                android:id="@+id/clear_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Clear"
+                android:textColor="@color/btn_color"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/low_stock_radio"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/low_stock"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10sdp" />
+
+            <RadioButton
+                android:id="@+id/not_in_stock_radio"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/Not_in_Stock"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10sdp" />
+
+            <RadioButton
+                android:id="@+id/in_stock_radio"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/in_Stock"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10sdp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/apply_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/corner_round_btn_shape"
+            android:text="@string/apply"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
+

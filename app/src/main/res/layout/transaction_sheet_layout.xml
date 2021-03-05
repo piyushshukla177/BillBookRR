@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sort_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/sort_fiter"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <!--    <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/sort_tv"
+                android:background="@color/light_gray" />
+    -->
+
+        <RelativeLayout
+            android:id="@+id/a_to_z_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/amount_high_to_low"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/high_to_low_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:buttonTint="@color/btn_color"
+                android:scaleX="0.7"
+                android:scaleY="0.7" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/z_to_a_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/amount_low_to_high"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/low_to_high_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:buttonTint="@color/btn_color"
+                android:scaleX="0.7"
+                android:scaleY="0.7" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_11sdp"
+                android:text="@string/Filter_Transaction_By" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/clear_textview"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_centerVertical="true"-->
+            <!--                android:text="Clear"-->
+            <!--                android:textColor="@color/btn_color"-->
+            <!--                android:textSize="@dimen/_10sdp"-->
+            <!--                android:textStyle="bold" />-->
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/sale_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="SALES"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/purchase_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="PURCHASE"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radio_group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/recieved_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="RECIEVED PAYMENT"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/payment_out_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="PAYMENT OUT"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/quotation_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="QUOTATION"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radio_group3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/sale_return_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="SALES RETURN"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/purchase_return_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="PURCHASE RETURN"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radio_group4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/purchase_oredr_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="PURCHASE ORDER"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/delivery_challan_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="DELIVERY CHALLAN"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+
+            <RadioButton
+                android:id="@+id/expense_rardio"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/radio_btn_drawable"
+                android:button="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:text="EXPENSE"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9sdp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/apply_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/corner_round_btn_shape"
+            android:text="@string/apply"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

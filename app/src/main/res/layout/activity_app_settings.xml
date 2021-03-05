@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AppSettingsActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_image"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="@string/App_Settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/update_btn"
+        android:layout_below="@+id/linear_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/Delete_All_Data"
+                        android:textColor="@color/blk"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/toolbar_relative"
+                    android:background="@color/light_gray2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/Security_and_Backup_Settings"
+                        android:textColor="@color/blk"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/toolbar_relative"
+                    android:background="@color/light_gray2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/Change_Language"
+                        android:textColor="@color/blk"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@+id/icon_iv"
+                        android:text="English"
+                        android:textColor="@color/blk"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:id="@+id/icon_iv"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/down_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/toolbar_relative"
+                    android:background="@color/light_gray2" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/payment_reminder_linear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/PAYMENT_REMINDER_TO_PARTIES"
+                        android:textColor="@color/blk"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:id="@+id/payment_reminder_imageview"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/down_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/toolbar_relative"
+                    android:background="@color/light_gray2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reminder_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/pre_due_date_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/pre_due_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Pre Due Date"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pre_due_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Send Payment reminder via SMS to Customers\n 3 days before invoice due date"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/due_date_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/due_date_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Due Date"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/due_date_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Send Payment reminder via SMS to Customers\n 3 days before on invoice due date"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/payment_reminder_Self_linear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/PAYMENT_REMINDER_TO_SELF"
+                        android:textColor="@color/blk"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:id="@+id/payment_reminder_self_imageview"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/down_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/toolbar_relative"
+                    android:background="@color/light_gray2" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bill_self_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@color/light_gray3"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Bill /Invoice"
+                    android:textColor="@color/btn_color" />
+
+                <LinearLayout
+                    android:id="@+id/pre_due_date_self_reminder_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/bill_invoice_due_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Pre Due Date"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bill_invoice_due_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Get Notification when you have to collect\n payment from customer 3 days before invoice due date"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/due_dateself_reminder_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/due_bill_invoice_date_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Due Date"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/due_bill_invoice_date_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Get notification\n 3 days before on invoice due date"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/purchase_self_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@color/light_gray3"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Purchase"
+                    android:textColor="@color/btn_color" />
+
+                <LinearLayout
+                    android:id="@+id/pre_due_date_purchase_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/purchase_due_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Pre Due Date"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/purchase_due_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Get Notification when you have to give\n payment to supplier 3 days before due date"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/due_purchase_reminder_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/due_purchase_date_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Due Date"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/due_purchase_date_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Get notification when you ahve \nto give payment to supplier on due date"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="0dp"
+                        android:text="@string/OTHERS"
+                        android:textColor="@color/blk"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/toolbar_relative"
+                    android:background="@color/light_gray2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/automatic_sms_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/Automatic_SMS"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/automatic_sms_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/Send_SMS_to_your_party_on_creating_any_transaction"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/outstanding_payments_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/Outstanding_payments"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/outstanding_payments_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/Get_daily_notification_with_recievable_and_payable_balance"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/sales_summary_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/Yesterday_sales_summary"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sales_summary_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/Get_daily_notification_with_sales_and_highest_sold_items_from_previous_day"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/low_stock_alert_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/Low_stock_alert"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/low_stock_alert_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/Get_daily_notofication_for_items_that_are_below_low_stock"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/whatsapp_reminder_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/whatsApp_Reminder"
+                            android:textColor="@color/blk"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/whatsapp_reminder_tv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/Get_WhatsApp_notification_when_you_have_to_collect_payment_from_customer"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:checked="false" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/toolbar_relative"
+                        android:background="@color/light_gray2" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/corner_round_btn_shape"
+        android:backgroundTint="@null"
+        android:text="@string/Update" />
+</RelativeLayout>

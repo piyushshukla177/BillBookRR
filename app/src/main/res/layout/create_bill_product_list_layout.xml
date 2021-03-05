@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ghee"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Rs 500"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_tv"
+        android:text="Rate 1.0 PCS x 550"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp" />
+
+    <ImageView
+        android:id="@+id/menu_imageview"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/vertical_menu"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/total_tv"
+        />
+
+</RelativeLayout>
