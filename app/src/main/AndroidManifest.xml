@@ -74,18 +74,6 @@
             android:name=".activities.CounterPosActivity"
             android:theme="@style/SplashTheme" />
         <activity
-            android:name=".activities.PurchaseReturnActivity"
-            android:theme="@style/SplashTheme" />
-        <activity
-            android:name=".activities.SaleReturnActivity"
-            android:theme="@style/SplashTheme" />
-        <activity
-            android:name=".activities.PurchaseOrderActivity"
-            android:theme="@style/SplashTheme" />
-        <activity
-            android:name=".activities.DeliveryChallanActivity"
-            android:theme="@style/SplashTheme" />
-        <activity
             android:name=".activities.ExpenseActivity"
             android:theme="@style/SplashTheme" />
         <activity
@@ -95,13 +83,7 @@
             android:name=".activities.PaymentOutActivity"
             android:theme="@style/SplashTheme" />
         <activity
-            android:name=".activities.QuotationActivity"
-            android:theme="@style/SplashTheme" />
-        <activity
             android:name=".activities.RecievedPaymentActivity"
-            android:theme="@style/SplashTheme" />
-        <activity
-            android:name=".activities.CreatePurchaseActivity"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".activities.AddProductsInCategoryActivity"

@@ -42,7 +42,7 @@ import retrofit2.Response;
 
 public class CounterPosActivity extends AppCompatActivity implements SelectCategorySheet.CategoryListener {
 
-    String from_activity, party_name = "";
+    String  party_name = "";
     public static CounterPosActivity cpa = null;
     public RecyclerView counter_recyclerview;
     Context context;
@@ -57,6 +57,7 @@ public class CounterPosActivity extends AppCompatActivity implements SelectCateg
     private ApiHelper apiHelper;
     ArrayList<HashMap<String, String>> selected_product_list = new ArrayList();
 
+    String bill_type;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +84,7 @@ public class CounterPosActivity extends AppCompatActivity implements SelectCateg
         add_more_details_linear = findViewById(R.id.add_more_details_linear);
 
         Intent intent = getIntent();
-        from_activity = intent.getStringExtra("from_activity");
+        bill_type = intent.getStringExtra("bill_type");
         party_name = intent.getStringExtra("party_name");
         back_image.setOnClickListener(
                 new View.OnClickListener() {
@@ -153,7 +154,7 @@ public class CounterPosActivity extends AppCompatActivity implements SelectCateg
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mAdapter.getAllSelectedProducts(from_activity);
+                        mAdapter.getAllSelectedProducts(bill_type);
                         finish();
                     }
                 }

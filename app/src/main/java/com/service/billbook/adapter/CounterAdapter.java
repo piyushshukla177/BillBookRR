@@ -15,8 +15,6 @@ import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.service.billbook.R;
 import com.service.billbook.activities.CounterPosActivity;
 import com.service.billbook.activities.CreateBillActivity;
-import com.service.billbook.activities.CreatePurchaseActivity;
-import com.service.billbook.activities.QuotationActivity;
 import com.service.billbook.model.CounterModel;
 
 import java.util.ArrayList;
@@ -135,7 +133,7 @@ public class CounterAdapter extends RecyclerView.Adapter<CounterAdapter.CounterV
     ArrayList<HashMap<String, String>> selected_product_list = new ArrayList<>();
     HashMap<String, String> m = null;
 
-    public void getAllSelectedProducts(String fromActivity) {
+    public void getAllSelectedProducts(String bill_type) {
         selected_product_list.clear();
         int j = 0;
         while (j < item_list.size()) {
@@ -152,18 +150,20 @@ public class CounterAdapter extends RecyclerView.Adapter<CounterAdapter.CounterV
             }
             j++;
         }
-        if (fromActivity.equals("CreateBillActivity")) {
-            Intent intent = new Intent(context, CreateBillActivity.class);
-            intent.putExtra("arraylist", selected_product_list);
-            context.startActivity(intent);
-        } else if (fromActivity.equals("CreatePurchaseActivity")) {
-            Intent intent = new Intent(context, CreatePurchaseActivity.class);
-            intent.putExtra("arraylist", selected_product_list);
-            context.startActivity(intent);
-        } else if (fromActivity.equals("QuotationActivity")) {
-            Intent intent = new Intent(context, QuotationActivity.class);
-            intent.putExtra("arraylist", selected_product_list);
-            context.startActivity(intent);
-        }
+        Intent intent = new Intent(context, CreateBillActivity.class);
+        intent.putExtra("arraylist", selected_product_list);
+        intent.putExtra("bill_type", bill_type);
+        context.startActivity(intent);
+//        if (fromActivity.equals("CreateBillActivity")) {
+//
+//        } else if (fromActivity.equals("CreatePurchaseActivity")) {
+//            Intent intent = new Intent(context, CreatePurchaseActivity.class);
+//            intent.putExtra("arraylist", selected_product_list);
+//            context.startActivity(intent);
+//        } else if (fromActivity.equals("QuotationActivity")) {
+//            Intent intent = new Intent(context, QuotationActivity.class);
+//            intent.putExtra("arraylist", selected_product_list);
+//            context.startActivity(intent);
+//        }
     }
 }

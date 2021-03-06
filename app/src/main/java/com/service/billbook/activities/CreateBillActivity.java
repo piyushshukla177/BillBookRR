@@ -73,7 +73,7 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
     ArrayList partyList = new ArrayList();
     ArrayList<HashMap<String, String>> selected_product_list;
     LinearLayout addition_charges_linear, discount_linear, round_off_linear, notes_linear;
-    TextView additional_charges_tv, discount_tv, round_off_tv, notes_tv, add_more_items_tv, edit_invoice_tv, subtotal_tv, grand_total_et, total_items_tv, balance_amount_tv, invoice_number_tv, invoice_date_tv;
+    TextView title_tv, additional_charges_tv, discount_tv, round_off_tv, notes_tv, add_more_items_tv, edit_invoice_tv, subtotal_tv, grand_total_et, total_items_tv, balance_amount_tv, invoice_number_tv, invoice_date_tv;
     ImageView additional_cross_imageview, discount_cross_imageview, roundoff_cross_imageview, notes_imageview;
     RelativeLayout cash_received_relative, enter_cash_received_relative, balance_amount_relative, additional_relative, discount_relative, round_off_relative, notes_relative, sub_total_relative;
     EditText additional_charges_et, discount_percentage_et, discount_rs_et, round_off_et, cash_received_et, notes_et, charge_name_et;
@@ -83,6 +83,7 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
 
     CardView save_cardview;
     String user_id;
+    String bill_type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +142,29 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
         notes_et = findViewById(R.id.notes_et);
         charge_name_et = findViewById(R.id.charge_name_et);
         save_cardview = findViewById(R.id.save_cardview);
+        title_tv = findViewById(R.id.title_tv);
+
+        Intent intent = getIntent();
+        bill_type = intent.getStringExtra("bill_type");
+        if (bill_type.equals("purchase")) {
+            title_tv.setText("Create Purchase");
+            invoice_number_tv.setText("Purchase #1");
+        } else if (bill_type.equals("quotation")) {
+            title_tv.setText(getString(R.string.Proforma_Quotation));
+            invoice_number_tv.setText("Quotation #1");
+        } else if (bill_type.equals("delivery_challan")) {
+            title_tv.setText(getString(R.string.Delivery_Challan));
+            invoice_number_tv.setText("Delivery Challan #1");
+        } else if (bill_type.equals("purchase_order")) {
+            title_tv.setText(getString(R.string.Purchase_Order));
+            invoice_number_tv.setText("Purchase Order #1");
+        } else if (bill_type.equals("sale_return")) {
+            title_tv.setText(getString(R.string.Sale_Return));
+            invoice_number_tv.setText("Sale Return #1");
+        } else if (bill_type.equals("purchase_return")) {
+            title_tv.setText("Purchase Return");
+            invoice_number_tv.setText("Purchase Return #1");
+        }
         save_cardview.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -196,7 +220,7 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
                         if (!select_party_spinner.getText().toString().isEmpty()) {
                             intent_status = "counter";
                             Intent intent = new Intent(CreateBillActivity.this, CounterPosActivity.class);
-                            intent.putExtra("from_activity","CreateBillActivity");
+                            intent.putExtra("bill_type", bill_type);
                             startActivity(intent);
                             finish();
                         } else {
@@ -356,7 +380,7 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
                             intent_status = "counter";
                             Intent intent = new Intent(CreateBillActivity.this, CounterPosActivity.class);
                             intent.putExtra("arraylist", selected_product_list);
-                            intent.putExtra("from_activity","CreateBillActivity");
+                            intent.putExtra("from_activity", "CreateBillActivity");
                             startActivity(intent);
                             finish();
                             SetAdditionalInfoDb myTask = new SetAdditionalInfoDb();
@@ -717,7 +741,7 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
     private class ClearAllData extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... params) {
-            selected_party="";
+            selected_party = "";
             db.AdditionalDao().deleteAllAdditionalInfo();
             return "";
         }

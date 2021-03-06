@@ -24,17 +24,11 @@ import com.service.billbook.activities.CompanySettingsActivity;
 import com.service.billbook.activities.ConnectToComputerActivity;
 import com.service.billbook.activities.CounterPosActivity;
 import com.service.billbook.activities.CreateBillActivity;
-import com.service.billbook.activities.CreatePurchaseActivity;
-import com.service.billbook.activities.DeliveryChallanActivity;
 import com.service.billbook.activities.ExpenseActivity;
 import com.service.billbook.activities.NotificationsActivity;
 import com.service.billbook.activities.PaymentOutActivity;
-import com.service.billbook.activities.PurchaseOrderActivity;
-import com.service.billbook.activities.PurchaseReturnActivity;
-import com.service.billbook.activities.QuotationActivity;
 import com.service.billbook.activities.RecievedPaymentActivity;
 import com.service.billbook.activities.ReportsActivity;
-import com.service.billbook.activities.SaleReturnActivity;
 import com.service.billbook.adapter.TransactionListAdapter;
 import com.service.billbook.model.TransactionListModel;
 
@@ -66,7 +60,6 @@ public class DashboardFragment extends Fragment {
     }
 
     int i = 0;
-
     void init(View root) {
         context = getActivity();
         nestedScroll = root.findViewById(R.id.nestedScroll);
@@ -123,8 +116,8 @@ public class DashboardFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), CreatePurchaseActivity.class);
-                        intent.putExtra("from_activity", "purchase");
+                        Intent intent = new Intent(getActivity(), CreateBillActivity.class);
+                        intent.putExtra("bill_type", "purchase");
                         startActivity(intent);
                     }
                 }
@@ -142,7 +135,8 @@ public class DashboardFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), QuotationActivity.class);
+                        Intent intent = new Intent(getActivity(), CreateBillActivity.class);
+                        intent.putExtra("bill_type", "quotation");
                         startActivity(intent);
                     }
                 }
@@ -178,7 +172,8 @@ public class DashboardFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), DeliveryChallanActivity.class);
+                        Intent intent = new Intent(getActivity(), CreateBillActivity.class);
+                        intent.putExtra("bill_type", "delivery_challan");
                         startActivity(intent);
                     }
                 }
@@ -187,7 +182,8 @@ public class DashboardFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), PurchaseOrderActivity.class);
+                        Intent intent = new Intent(getActivity(), CreateBillActivity.class);
+                        intent.putExtra("bill_type", "purchase_order");
                         startActivity(intent);
                     }
                 }
@@ -196,7 +192,8 @@ public class DashboardFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), SaleReturnActivity.class);
+                        Intent intent = new Intent(getActivity(), CreateBillActivity.class);
+                        intent.putExtra("bill_type", "sale_return");
                         startActivity(intent);
                     }
                 }
@@ -205,7 +202,8 @@ public class DashboardFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), PurchaseReturnActivity.class);
+                        Intent intent = new Intent(getActivity(), CreateBillActivity.class);
+                        intent.putExtra("bill_type", "purchase_return");
                         startActivity(intent);
                     }
                 }
@@ -215,6 +213,7 @@ public class DashboardFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(getActivity(), CreateBillActivity.class);
+                        intent.putExtra("bill_type", "sale");
                         startActivity(intent);
                     }
                 }
