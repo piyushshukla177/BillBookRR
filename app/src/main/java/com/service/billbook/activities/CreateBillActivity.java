@@ -938,7 +938,6 @@ public class CreateBillActivity extends AppCompatActivity implements EditInvoice
                     mProgressDialog.hide();
                 }
             }
-
             @Override
             public void onFailure(@NonNull Call<PartyListResponseModel> call,
                                   @NonNull Throwable t) {
